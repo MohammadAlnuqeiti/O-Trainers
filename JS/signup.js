@@ -20,24 +20,31 @@ function logSubmit(event) {
     let f = false
     if(  User.value.match(useCon) ){
             a=true
+            document.getElementById("errName").innerHTML = "" 
+
     }else{
         document.getElementById("errName").style.display = 'block'
         document.getElementById("errName").innerHTML = "**The name is not valid" 
     }
     if(  Email.value.match(mailCon) ){
             b=true
+            document.getElementById("errEmail").innerHTML = ""
+
     }else{
         document.getElementById("errEmail").style.display = 'block'
         document.getElementById("errEmail").innerHTML = "**The email is not valid"
     }
     if(   Phone.value.match(Mobilcheck) ){
             c=true
+            document.getElementById("errphon").innerHTML = ""
     }else{
         document.getElementById("errphon").style.display = 'block'
         document.getElementById("errphon").innerHTML = "**The phone is not valid"
     }
     if(   Pass.value.match(checkPass) ){
             d=true
+            document.getElementById("match").innerHTML = ""
+
     }else{
         document.getElementById("match").style.display = 'block'
         document.getElementById("match").innerHTML = "**The password does not match"

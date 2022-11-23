@@ -1,3 +1,3 @@
-gotoregister = () => { window.open('./signup.html')}
+gotoregister = () => { window.location=('./signup.html')}
 
-gotolog = () => { window.open('./login.html') }
+gotolog = () => { window.location=('./login.html') }

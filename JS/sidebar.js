@@ -3,11 +3,11 @@
 //   document.getElementById(`container2`).style.display=`none`
 //   document.getElementById(`container1`).style.display=`flex`
 // }
-$(document).ready(function(){
-    $(".span1").click(function(){
-    $(".dropdown").slideToggle(500);
-    });
-    });
+// $(document).ready(function(){
+//     $(".span1").click(function(){
+//     $(".dropdown").slideToggle(500);
+//     });
+//     });
     
     $('.sidenav li').click(function(){
     $('.sidenav li').removeClass("active");
@@ -18,7 +18,7 @@ $(document).ready(function(){
     $(".menu-icon").click(function(e) {
     e.preventDefault();
     $(".menu-icon").toggleClass("menuicon");
-    $(".main").toggleClass("main-width");
+    // $(".main").toggleClass("main-width");
     $(".sidebar").toggleClass("active1");
     $(".sidenav li a").toggleClass("anchor");
     $(".sidenav li").toggleClass("lislide");
