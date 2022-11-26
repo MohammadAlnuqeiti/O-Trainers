@@ -9,8 +9,6 @@
 	<link rel="stylesheet" type="text/css" href="./CSS/trainer.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/782baa506c.js" crossorigin="anonymous"></script>	
-    <link rel="icon" href="./icon/Untitled-2 (3).png">
-
     <title>Trainer</title>
 
 </head>
@@ -31,87 +29,83 @@
     </div>
 
     <div id="home" >
-
-        <div id="home1">
-            <img src="" id="trimage" alt="Use profile">
+  
+        <div class="tarinerphoto">
+            <img id="trainerphoto" src="./icon/icon-256x256.png" alt="" style="width:240px">
+            <div id="home1">
+            </div>
         </div>
         <div class="neeews">
-            <div class="coupon">
-                <div class="containerHome">
-                    <h3>Important news </h3>
-                </div>
-
-                <div class="containerHome" style="background-color:white">
-                    <p id="news1"></p>
-                </div>
-
+            <div class="card">
+                <h2> News</h2>
+                <p id="news3"></p>
             </div>
-            <div class="coupon">
-                <div class="containerHome">
-                    <h3>daily news </h3>
-                </div>
-
-                <div class="containerHome" style="background-color:white">
-                    <p id="news2"></p>
-                </div>
-
+            
+            <div class="card">
+                <h2>Important News</h2>
+                <p id="news1"></p>
             </div>
-        </div>
 
+            <div class="card">
+                <h2>Daily News</h2>
+                <p id="news2"></p>
+            </div>
+</div>
     </div>
-    <!-- <div style="display: flex;"> -->
-    <div >
-
-
-            <div id="userProfile">
-                <div class="card1">
-                    <img id="trainerphoto" src="./icon/icon-256x256.png" alt="" style="width:100%">
-                    <h1 id="traincard"> </h1>
-                    <br>
-                    <p class="title">Orange Coding Academy</p>
-                    <br>  
-                    <p><button id="edittrain" onclick="edittrain()">Edit</button></p>
-                </div>
-                <div class="card2">
-                    <div class="info">
-                        <p>Information</p>
-                    </div> 
-                    <div>
-                        <p>Name:</p>
-                        <span id="profname"></span>
-                    </div>
-                    <div>
-                        <p>Id: 0</p>
-                    </div>
-                            
-                    <div>
-                        <p>Email:</p>
-                        <span id="email"></span>
-                    </div>    
-                    <div>
-                        <p>Phone Number:</p>
-                        <span id="phone"></span>
-                    </div>    
-                    <div>
-                        <p>Brthday Date:</p>
-                        <span id="birthday">24-12-1995</span>
-                    </div>    
-                    <div>
-                        <p>bio:</p>
-                        <span id="biotext"></span>
-                        <textarea id="biobox" cols="45" rows="6"></textarea>
-                        <button id="biobut" onclick="savebio()">SAVE</button>
-                    </div>    
-                    
-                </div>
+   
+        
+    <div id="userProfile">
+        <div class="card1">
+            <img id="trainerphoto1" src="./icon/icon-256x256.png" alt="" style="width:100%">
+            <h1 id="traincard"> </h1>
+            <br>
+            <p class="title">Orange Coding Academy</p>
+            <br>  
+            <p><button id="edittrain" onclick="edittrain()">Edit</button></p>
+        </div>
+        <div class="card2">
+            <div class="info">
+                <p>Information</p>
+            </div> 
+            <div>
+                <p>Name:</p>
+                <span id="profname"></span>
             </div>
+            <div>
+                <p>Id: 0</p>
+            </div>
+                    
+            <div>
+                <p>Email:</p>
+                <span id="email"></span>
+            </div>    
+            <div>
+                <p>Phone Number:</p>
+                <span id="phone"></span>
+            </div>    
+            <div>
+                <p>Brthday Date:</p>
+                <span id="birthday">24-12-1995</span>
+            </div>    
+            <div>
+                <p>bio:</p>
+                <span id="biotext"></span>
+                <textarea id="biobox" cols="45" rows="6"></textarea>
+                <button id="biobut" onclick="savebio()">SAVE</button>
+            </div>    
+            
+        </div>
+    </div>
         
     </div>
     <div id="studcard">
-        <input type="number" class="studinput" id="Studentid" placeholder="Enter ID">
-        <p id="erroridsame">id is repeat</p>
-        <input type="text" class="studinput" id="StudentName" placeholder="Enter Name">
+        <input type="text" class="studinput" value="" id="StudentName" placeholder="Enter Name">
         <button id="savestudent" onclick="saveStudent()">SAVE</button>
+    </div>
+    <div id="deletcard">
+        <h6>Do You Want Delet This Student</h6>
+        <button id="savestudent" onclick="suredelet()">Yes</button>
+        <button id="savestudent" onclick="notdelet()">No</button>
     </div>
 
     <section id="student" class="tablee">
@@ -124,9 +118,8 @@
     </section>
     <section id="attendance" class="tablee">
         <div id="boxinput1">
-            <input type="text" id="studattend" placeholder="Attendance">
-            <input type="text" id="allDay" placeholder="Total Day">
-            <input type="text" id="coatatten" placeholder="Coach Name">
+            <input type="text" value="" id="studattend" placeholder="Attendance">
+            <input type="text" value="" id="allDay" placeholder="Total Day">
             <button onclick="addatten()">add Attendance</button>
         </div>
         <div id="attendance-list" class="table-list">
@@ -135,9 +128,8 @@
     </section>
     <section id="task" class="tablee">
         <div id="boxinput2">
-            <input type="text" id="studtask" placeholder="student Task">
-            <input type="text" id="allTask" placeholder="All Task">
-            <input type="text" id="coattask" placeholder="Coach Name">
+            <input type="text" value="" id="studtask" placeholder="student Task">
+            <input type="text" value="" id="allTask" placeholder="All Task">
             <button onclick="addtask()">add Task</button>
         </div>
         <div id="task-list" class="table-list">
@@ -146,8 +138,7 @@
     </section>
     <section id="feed" class="tablee">
         <div id="boxinput3">
-            <input type="text" id="Studfedd" placeholder="Feed Back">
-            <input type="text" id="cofeed" placeholder="Coach Name">
+            <textarea name="" id="Studfedd" cols="20" rows="1" placeholder="Feed Back"></textarea>
             <button onclick="addfeed()">add FeedBack</button>
         </div>
         <div id="feed-back" class="table-list">

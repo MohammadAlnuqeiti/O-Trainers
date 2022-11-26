@@ -4,7 +4,7 @@ let Trainers = JSON.parse(localStorage.getItem("Trainers")) || []
 function logSubmit(event) {
 
     let trainId = Trainers.length
-    let obj = { name: User.value, mail: Email.value, phone: Phone.value, password: Pass.value, photo: image_input.value}
+    let obj = { id:trainId.value, name: User.value, mail: Email.value, phone: Phone.value, password: Pass.value}
     Trainers.push(obj)
     let useCon = /^[a-zA-Z ]/
     let useCon1 = /[^a-zA-Z ]/
@@ -21,7 +21,6 @@ function logSubmit(event) {
     if(  User.value.match(useCon) ){
             a=true
             document.getElementById("errName").innerHTML = "" 
-
     }else{
         document.getElementById("errName").style.display = 'block'
         document.getElementById("errName").innerHTML = "**The name is not valid" 
@@ -65,13 +64,13 @@ function logSubmit(event) {
         Phone.style.borderColor = ''
 
         localStorage.setItem("Trainers", JSON.stringify(Trainers));
-        window.open("./login.html")  
+        window.open('./login.html', '_self')  
     }
     event.preventDefault();
  
 }
+let trainId = Trainers.length
 
-const image_input = document.querySelector("#image-input")
 const User = document.getElementById('username')
 const Email= document.getElementById('email')
 const Phone = document.getElementById('phone')
@@ -81,12 +80,5 @@ const form = document.getElementById('form')
 form.addEventListener('submit', logSubmit)
 
 
-image_input.addEventListener("change", function() {
-    const reader = new FileReader();
-    reader.addEventListener("load", () => {
-    const uploaded_image = reader.result;
-    document.querySelector("#display-image").style.backgroundImage = `url(${uploaded_image})`;
-    });
-    reader.readAsDataURL(this.files[0]);
-});
+
 

@@ -11,6 +11,14 @@ var Trainers = JSON.parse(localStorage.getItem("Trainers"));
             console.log(true);
             }
             Trainers.map(e => {
+            if (compmail !== e.mail && compPass !== e.password ){
+                document.getElementById("err").style.display = 'block'
+                document.getElementById("err").innerHTML = "**please inter correct your email and password"
+            console.log(true);
+            }
+        })
+        
+            Trainers.map(e => {
                 
             if(e.mail === compmail && e.password == compPass && compmail !== "" && compPass !== ""){
                 sessionStorage.setItem("loname", JSON.stringify(e.name));
