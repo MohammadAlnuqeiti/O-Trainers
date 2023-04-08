@@ -8,7 +8,7 @@ var Trainers = JSON.parse(localStorage.getItem("Trainers"));
             if (compmail==""&&compPass=="" ){
                 document.getElementById("err").style.display = 'block'
                 document.getElementById("err").innerHTML = "**please inter your email and password"
-            console.log(true);
+                console.log(true);
             }
             Trainers.map(e => {
             if (compmail !== e.mail && compPass !== e.password ){
